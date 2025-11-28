@@ -145,13 +145,13 @@ args = parser.parse_args()
 
 # === STATIC CONFIG ===
 class Config:
-    victim_ip       = "192.168.0.112"
+    victim_ip       = "192.168.100.112"
     router_ip       = "192.168.0.1"
-    attacker_mac    = "92:15:44:C7:C6:07"
-    interface       = r"\Device\NPF_{12454827-664B-404B-8CC5-273662F64BCA}"
-    spoofed_dns_ip  = "192.168.0.175"
-    victim_mac      = "70:9c:d1:df:dd:9c"
-    router_mac      = "40:3f:8c:cb:6d:70"
+    attacker_mac    = "92:15:56:B8:C6:07"
+    interface       = r"\Device\NPF_{12454827-854B-404B-8CC6-273662F64BCA}"
+    spoofed_dns_ip  = "192.168.100.175"
+    victim_mac      = "70:9c:a1:bf:dd:9c"
+    router_mac      = "40:3f:4c:cb:2d:70"
     enable_arp      = args.arp
     enable_dns      = args.dns
     enable_sniff    = args.sniff
@@ -160,4 +160,5 @@ class Config:
 
 # === RUN ===
 tool = MITMTool(Config)
+
 tool.run()
